@@ -1,0 +1,22 @@
+<button
+  type="{{type}}"
+  class="lib-btn lib-btn-{{severity}} lib-btn-{{size}}"
+  [class.lib-btn-rounded]="rounded"
+  [class.lib-btn-outlined]="outlined"
+  [class.lib-btn-raised]="raised"
+  [class.lib-btn-text]="text"
+  [class.lib-btn-link]="link"
+  [class.is-loading]="loading"
+  [class.is-disabled]="disabled"
+  [ngClass]="customClass"
+  [attr.aria-label]="ariaLabel || label"
+  [attr.aria-describedby]="ariaDescribedby"
+  [attr.tabindex]="tabIndex"
+  [disabled]="disabled || loading"
+  (click)="onClick($event)"
+>
+  <span *ngIf="loading" class="lib-btn-spinner" aria-hidden="true"></span>
+  <span *ngIf="icon && iconPosition === 'left'" class="lib-btn-icon lib-btn-icon-left" [ngClass]="[icon]"></span>
+  <span *ngIf="label" class="lib-btn-label">{{ label }}</span>
+  <span *ngIf="icon && iconPosition === 'right'" class="lib-btn-icon lib-btn-icon-right" [ngClass]="[icon]"></span>
+</button>

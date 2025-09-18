@@ -1,0 +1,132 @@
+@use '../../../styles/colors';
+@use '../../../styles/typography';
+@use '../../../styles/spacing';
+@use '../../../styles/shadows';
+@use '../../../styles/mixins';
+@use '../../../styles/transitions';
+
+.lib-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: typography.$font-family-sans;
+  font-size: typography.$font-size-base;
+  font-weight: typography.$font-weight-medium;
+  line-height: typography.$line-height-base;
+  padding: spacing.$spacing-sm spacing.$spacing-lg;
+  border: none;
+  border-radius: spacing.$radius-medium;
+  cursor: pointer;
+  transition: transitions.$transition-normal;
+  background: colors.$color-primary;
+  color: colors.$color-white;
+  box-shadow: shadows.$shadow-xs;
+  position: relative;
+  outline: none;
+
+  &:hover:not(:disabled):not(.is-disabled):not(.is-loading) {
+    background: colors.$color-primary-dark;
+    box-shadow: shadows.$shadow-sm;
+  }
+  &:focus {
+    box-shadow: shadows.$shadow-focus;
+  }
+  &:active:not(:disabled):not(.is-disabled):not(.is-loading) {
+    background: colors.$color-primary-light;
+    box-shadow: shadows.$shadow-md;
+  }
+  &:disabled, &.is-disabled {
+    background: colors.$input-disabled-bg;
+    color: colors.$input-disabled-color;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+  }
+}
+
+// Severity variants
+.lib-btn-primary { background: colors.$color-primary; color: colors.$color-white; }
+.lib-btn-secondary { background: colors.$color-secondary; color: colors.$color-white; }
+.lib-btn-success { background: colors.$color-success; color: colors.$color-white; }
+.lib-btn-info { background: colors.$color-info; color: colors.$color-white; }
+.lib-btn-warning { background: colors.$color-warning; color: colors.$color-dark; }
+.lib-btn-danger { background: colors.$color-danger; color: colors.$color-white; }
+.lib-btn-help { background: colors.$color-info-dark; color: colors.$color-white; }
+.lib-btn-custom { background: colors.$btn-custom-color; color: colors.$color-white; }
+
+// Size variants
+.lib-btn-small { font-size: typography.$font-size-sm; padding: spacing.$spacing-xs spacing.$spacing-md; }
+.lib-btn-normal { font-size: typography.$font-size-base; padding: spacing.$spacing-sm spacing.$spacing-lg; }
+.lib-btn-large { font-size: typography.$font-size-lg; padding: spacing.$spacing-md spacing.$spacing-xl; }
+
+// Shape variants
+.lib-btn-rounded { border-radius: spacing.$radius-round; }
+
+// Outlined
+.lib-btn-outlined {
+  background: transparent;
+  color: colors.$color-primary;
+  border: 2px solid colors.$color-primary;
+  box-shadow: none;
+  &:hover:not(:disabled):not(.is-disabled):not(.is-loading) {
+    background: colors.$color-primary-light;
+    color: colors.$color-white;
+  }
+}
+
+// Raised
+.lib-btn-raised { box-shadow: shadows.$shadow-md; }
+
+// Text
+.lib-btn-text {
+  background: transparent;
+  color: colors.$color-primary;
+  box-shadow: none;
+  &:hover:not(:disabled):not(.is-disabled):not(.is-loading) {
+    background: colors.$color-primary-light;
+    color: colors.$color-white;
+  }
+}
+
+// Link
+.lib-btn-link {
+  background: none;
+  color: colors.$color-primary;
+  text-decoration: underline;
+  box-shadow: none;
+  padding: 0;
+  &:hover:not(:disabled):not(.is-disabled):not(.is-loading) {
+    color: colors.$color-primary-dark;
+    text-decoration: underline;
+  }
+}
+
+// Icon styles
+.lib-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2em;
+  margin-right: spacing.$spacing-xs;
+  &.lib-btn-icon-right { margin-left: spacing.$spacing-xs; margin-right: 0; }
+}
+
+// Spinner styles
+.lib-btn-spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid colors.$color-white;
+  border-top: 2px solid colors.$color-primary-dark;
+  border-radius: 50%;
+  animation: lib-btn-spin 0.6s linear infinite;
+  margin-right: spacing.$spacing-xs;
+}
+@keyframes lib-btn-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Label
+.lib-btn-label {
+  display: inline-block;
+}
