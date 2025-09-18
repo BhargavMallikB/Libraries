@@ -26,6 +26,36 @@
           "options": {
             "tsConfig": "projects/ui-lib/tsconfig.spec.json"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/ui-lib/.storybook",
+            "browserTarget": "ui-lib:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ui-lib"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/ui-lib/.storybook",
+            "browserTarget": "ui-lib:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ui-lib"
+            ],
+            "outputDir": "storybook-static"
+          }
         }
       }
     }
