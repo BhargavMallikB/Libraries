@@ -1,0 +1,101 @@
+// Brand Colors
+$color-primary: #2563eb; // blue-600
+$color-primary-light: #3b82f6; // blue-500
+$color-primary-dark: #1e40af; // blue-800
+$color-secondary: #6c757d; // gray-600
+$color-secondary-light: #adb5bd; // gray-400
+$color-secondary-dark: #343a40; // gray-800
+
+// Semantic Colors
+$color-success: #19c37d;
+$color-success-light: #43e6a3;
+$color-success-dark: #13a76a;
+$color-danger: #dc3545;
+$color-danger-light: #f5b7b1;
+$color-danger-dark: #b71c1c;
+$color-warning: #f7b500;
+$color-warning-light: #ffeaa7;
+$color-warning-dark: #f59e42;
+$color-info: #17a2b8;
+$color-info-light: #bee5eb;
+$color-info-dark: #0c5460;
+
+// Neutral Colors
+$color-white: #fff;
+$color-black: #000;
+$color-light: #f9fbfd;
+$color-dark: #2a3142;
+$color-muted: #6c757d;
+$color-border: #e6e8f0;
+$color-background: #f8fafc;
+$color-surface: #fff;
+
+// Input Colors
+$input-bg: $color-white;
+$input-disabled-bg: #e9ecef;
+$input-disabled-color: $color-muted;
+$input-error-color: $color-danger;
+$input-success-color: $color-success;
+$input-border-color: #ced4da;
+$input-focus-border-color: #13a76a;
+
+// Alert Colors
+$alert-success-bg: #f0fff3;
+$alert-success-border: #c3e6cb;
+$alert-success-text: #155724;
+$alert-error-bg: #ffeff1;
+$alert-error-border: #f5c6cb;
+$alert-error-text: #d62c3d;
+$alert-warning-bg: #ffeaa7;
+$alert-warning-border: #ffeaa7;
+$alert-warning-text: #F89406;
+$alert-info-bg: #bee5eb;
+$alert-info-border: #bee5eb;
+$alert-info-text: #2F96B4;
+
+// Badge Colors
+$badge-primary: $color-primary;
+$badge-secondary: $color-secondary;
+$badge-success: $color-success;
+$badge-danger: $color-danger;
+$badge-warning: $color-warning;
+$badge-info: $color-info;
+$badge-light: $color-light;
+$badge-dark: $color-dark;
+
+// Badge Soft Colors
+$badge-soft-primary-bg: #cce5ff;
+$badge-soft-primary-text: #004085;
+$badge-soft-secondary-bg: #e2e3e5;
+$badge-soft-secondary-text: #383d41;
+$badge-soft-success-bg: #d4edda;
+$badge-soft-success-text: #155724;
+$badge-soft-danger-bg: #f8d7da;
+$badge-soft-danger-text: #721c24;
+$badge-soft-warning-bg: #fff3cd;
+$badge-soft-warning-text: #856404;
+$badge-soft-info-bg: #d1ecf1;
+$badge-soft-info-text: #0c5460;
+$badge-soft-light-bg: #fefefe;
+$badge-soft-light-text: #818182;
+$badge-soft-dark-bg: #d6d8d9;
+$badge-soft-dark-text: #1b1e21;
+
+// Button Colors
+$btn-custom-color: #f59e42;
+$btn-hover-shadow-primary: rgba(37,99,235,0.18);
+$btn-hover-shadow-secondary: rgba(108,117,125,0.18);
+$btn-hover-shadow-success: rgba(25,195,125,0.18);
+$btn-hover-shadow-danger: rgba(220,53,69,0.18);
+$btn-hover-shadow-custom: rgba(245,158,66,0.18);
+
+// Misc
+$icon-color: #b0b7c3;
+$category-color: #7b8ca6;
+$breadcrumb-bg: $color-light;
+$breadcrumb-title-color: $color-dark;
+$breadcrumb-item-color: $color-muted;
+$breadcrumb-separator-color: #d1d5db;
+$menu-bg: $color-background;
+$menu-shadow: 0 2px 8px rgba(30,34,90,0.04);
+$menu-border-color: $color-border;

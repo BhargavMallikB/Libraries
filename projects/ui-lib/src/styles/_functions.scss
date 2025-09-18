@@ -1,0 +1,25 @@
+// Common SCSS functions for UI library
+@function rem($px) {
+  @return $px / 16 * 1rem;
+}
+
+@function em($px, $base: 16) {
+  @return $px / $base * 1em;
+}
+
+@function color-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+@function spacing($factor) {
+  // Returns spacing based on $spacing-md as base
+  @return $factor * 1rem;
+}
+
+@function pow($base, $exp) {
+  $result: 1;
+  @for $i from 1 through $exp {
+    $result: $result * $base;
+  }
+  @return $result;
+}

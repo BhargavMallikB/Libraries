@@ -1,0 +1,93 @@
+// Base styles for UI library
+@import 'variables';
+@import 'colors';
+@import 'typography';
+@import 'spacing';
+@import 'shadows';
+@import 'zindex';
+@import 'transitions';
+@import 'mixins';
+@import 'functions';
+
+// CSS Reset & global box-sizing
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: $line-height-base;
+  background: $color-light;
+  color: $color-dark;
+}
+
+body {
+  font-family: $font-family-sans;
+  font-size: $font-size-base;
+  background: $color-light;
+  color: $color-dark;
+  margin: 0;
+  padding: 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans;
+  font-weight: $heading-weight;
+  margin-top: 0;
+  margin-bottom: $spacing-sm;
+  line-height: $line-height-sm;
+}
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
+
+// Paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+}
+
+// Links
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: $transition-color;
+  &:hover, &:focus {
+    color: $color-primary-dark;
+    text-decoration: underline;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  padding-left: $spacing-lg;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Blockquotes
+blockquote {
+  font-size: $blockquote-font-size;
+  font-style: $blockquote-font-style;
+  margin: $spacing-md 0;
+  padding-left: $spacing-lg;
+  border-left: 4px solid $color-primary;
+}
+
+// Accessibility: Visually hidden utility
+.visually-hidden {
+  @include visually-hidden;
+}
+
+// ...add more global styles and resets as needed

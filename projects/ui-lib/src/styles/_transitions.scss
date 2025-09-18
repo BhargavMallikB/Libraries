@@ -1,0 +1,16 @@
+// Transition variables for UI library
+$transition-fast: all 0.2s ease;
+$transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Specific property transitions
+$transition-color: color 0.2s ease;
+$transition-bg: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-border: border-color 0.2s ease;
+$transition-shadow: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-transform: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Animation durations
+$animation-duration-fast: 0.2s;
+$animation-duration-normal: 0.3s;
+$animation-duration-slow: 0.5s;
